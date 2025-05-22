@@ -82,7 +82,6 @@ export function Footer() {
         }
     };
 
-    // Get the current year
     const currentYear = new Date().getFullYear();
 
     return (
@@ -111,7 +110,7 @@ export function Footer() {
                 className='relative overflow-hidden group/line py-12 mx-auto w-fit cursor-pointer'
                 onClick={() => scrollToSection('contact')}
             >
-                <h1 className='w-full text-[12vw] uppercase leading-none'>Let's Talk</h1>
+                <h1 className='w-full text-[12vw] uppercase leading-none'>Let&apos;s Talk</h1>
                 <span className='block w-full bg-white h-3 -translate-x-full group-hover/line:translate-x-0 duration-500 opacity-0 group-hover/line:opacity-100' />
             </div>
             <div className='w-full flex flex-col md:flex-row gap-10 justify-between'>

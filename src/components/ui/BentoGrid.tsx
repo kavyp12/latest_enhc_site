@@ -146,7 +146,7 @@ export const BentoGridItem = ({
                 className="text-sm relative z-20 px-4 py-2 bg-white text-black rounded-full text-center creativeBtn"
                 onClick={() => scrollToSection('contact')}
               >
-                <span>Let's Talk</span>
+                <span>Let&apos;s Talk</span>
               </button>
             </div>
           )}

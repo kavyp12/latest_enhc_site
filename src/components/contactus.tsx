@@ -56,22 +56,19 @@ const Contact = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          {/* Header */}
           <h3 className="text-xl text-white pb-5">Get In Touch</h3>
           
           <div className="grid lg:grid-cols-2 gap-16 mt-10">
-            {/* Left side - Simple & Clean */}
             <div className="flex flex-col justify-center">
               <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Let's Build
+                Let&apos;s Build
                 <br />
                 <span className="text-orange-500">Together</span>
               </h2>
               <p className="text-lg text-gray-400 mb-12 leading-relaxed max-w-md">
-                Ready to transform your business with AI? Let's discuss your project.
+                Ready to transform your business with AI? Let&apos;s discuss your project.
               </p>
               
-              {/* Contact Info - Minimal */}
               <div className="space-y-4">
                 <div className="group cursor-pointer">
                   <p className="text-gray-500 text-sm mb-1">Email</p>
@@ -88,7 +85,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Right side - Clean Form */}
             <div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-2 gap-4">
