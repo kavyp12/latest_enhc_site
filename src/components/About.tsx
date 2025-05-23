@@ -50,25 +50,45 @@ const About = () => {
       title: "Custom LLMs",
       desc: "Tailored language models for your specific needs",
       icon: FaBrain,
-      color: "orange"
+      color: "orange",
+      iconColor: "text-orange-400",
+      titleHoverColor: "group-hover:text-orange-400",
+      gradientFrom: "from-orange-500/[0.025]",
+      particleColor: "bg-orange-500/70",
+      borderHoverColor: "hover:border-orange-500/30"
     },
     {
       title: "AI Chatbots",
       desc: "Intelligent conversational interfaces",
       icon: FaRobot,
-      color: "blue"
+      color: "blue",
+      iconColor: "text-blue-400",
+      titleHoverColor: "group-hover:text-blue-400",
+      gradientFrom: "from-blue-500/[0.025]",
+      particleColor: "bg-blue-500/70",
+      borderHoverColor: "hover:border-blue-500/30"
     },
     {
       title: "AI Integration",
       desc: "Seamless AI implementations into existing systems",
       icon: FaCogs,
-      color: "purple"
+      color: "purple",
+      iconColor: "text-purple-400",
+      titleHoverColor: "group-hover:text-purple-400",
+      gradientFrom: "from-purple-500/[0.025]",
+      particleColor: "bg-purple-500/70",
+      borderHoverColor: "hover:border-purple-500/30"
     },
     {
       title: "ML Solutions",
       desc: "Advanced machine learning algorithms",
       icon: FaChartLine,
-      color: "green"
+      color: "green",
+      iconColor: "text-green-400",
+      titleHoverColor: "group-hover:text-green-400",
+      gradientFrom: "from-green-500/[0.025]",
+      particleColor: "bg-green-500/70",
+      borderHoverColor: "hover:border-green-500/30"
     }
   ];
 
@@ -129,6 +149,7 @@ const About = () => {
 
   return (
     <section id="about" className="relative flex flex-col w-full py-20 bg-black overflow-hidden">
+      {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <motion.div
           className="absolute top-20 left-10 w-72 h-72 bg-orange-500/[0.03] rounded-full blur-3xl"
@@ -150,6 +171,7 @@ const About = () => {
         />
       </div>
 
+      {/* Floating Particles */}
       <motion.div
         className="absolute inset-0 pointer-events-none"
         variants={floatingParticlesVariants}
@@ -175,6 +197,7 @@ const About = () => {
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
         >
+          {/* Header */}
           <motion.div variants={itemVariants} className="mb-24">
             <h3 className="text-xl text-white/60 pb-8 uppercase tracking-widest font-light">About Us</h3>
             <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -206,7 +229,7 @@ const About = () => {
                   }}
                 >
                   <p className="text-xl md:text-2xl leading-relaxed text-gray-300 font-light">
-                    At enhancemodel.ai, we don&apos;t just build AI—we craft intelligent solutions that revolutionize how businesses operate, engage, and grow in the digital age.
+                    At enhancemodel.ai, we don't just build AI—we craft intelligent solutions that revolutionize how businesses operate, engage, and grow in the digital age.
                   </p>
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-orange-500/[0.03] via-transparent to-blue-500/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
@@ -242,6 +265,7 @@ const About = () => {
             </div>
           </motion.div>
 
+          {/* Mission, Vision, Values */}
           <motion.div variants={itemVariants} className="grid lg:grid-cols-3 gap-8 mb-24">
             {[
               { title: "Empowering Innovation", subtitle: "Our Mission", color: "orange", desc: "We specialize in developing custom Large Language Models, intelligent chatbots, and seamless AI integrations tailored to your unique business needs." },
@@ -298,6 +322,7 @@ const About = () => {
             ))}
           </motion.div>
 
+          {/* Expertise Areas - FIXED VERSION */}
           <motion.div variants={itemVariants} className="mb-24">
             <div className="text-center mb-16">
               <motion.h4
@@ -318,11 +343,11 @@ const About = () => {
                   <motion.div
                     key={index}
                     className="group cursor-pointer"
-                    whileHover={{ y: -12, rotateY: 3, scale:1.03 }}
+                    whileHover={{ y: -12, rotateY: 3, scale: 1.03 }}
                     transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
                   >
                     <div
-                      className="relative p-8 h-full rounded-3xl backdrop-blur-lg bg-white/[0.005] border border-white/[0.015] hover:border-white/[0.06] transition-all duration-700 overflow-hidden"
+                      className={`relative p-8 h-full rounded-3xl backdrop-blur-lg bg-white/[0.005] border border-white/[0.015] ${item.borderHoverColor} transition-all duration-700 overflow-hidden`}
                       onMouseMove={handleMouseMove}
                       style={{
                         transform: `perspective(1000px) rotateX(${mousePosition.y * 2.5}deg)`,
@@ -335,21 +360,14 @@ const About = () => {
                           whileHover={{
                             rotateY: 180,
                             scale: 1.12,
-                            borderColor: `rgba(var(--color-${item.color}), 0.3)`,
-                            boxShadow: `0 0 15px rgba(var(--color-${item.color}),0.2)`
+                            boxShadow: `0 0 15px rgba(${item.color === 'orange' ? '249, 115, 22' : item.color === 'blue' ? '59, 130, 246' : item.color === 'purple' ? '168, 85, 247' : '34, 197, 94'}, 0.2)`
                           }}
                           transition={{ duration: 0.5 }}
-                          style={{
-                            "--color-orange": '249, 115, 22',
-                            "--color-blue": '59, 130, 246',
-                            "--color-purple": '168, 85, 247',
-                            "--color-green": '34, 197, 94',
-                          } as React.CSSProperties}
                         >
-                          <IconComponent className={`w-10 h-10 text-${item.color}-400`} />
+                          <IconComponent className={`w-10 h-10 ${item.iconColor}`} />
                         </motion.div>
 
-                        <h5 className={`font-semibold text-white mb-4 text-lg group-hover:text-${item.color}-400 transition-colors duration-500`}>
+                        <h5 className={`font-semibold text-white mb-4 text-lg ${item.titleHoverColor} transition-colors duration-500`}>
                           {item.title}
                         </h5>
                         <p className="text-sm text-gray-400 leading-relaxed font-light">
@@ -357,10 +375,10 @@ const About = () => {
                         </p>
                       </div>
 
-                      <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br from-${item.color}-500/[0.025] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
+                      <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${item.gradientFrom} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
 
                       <motion.div
-                        className={`absolute top-2 right-2 w-1.5 h-1.5 bg-${item.color}-500/70 rounded-full`}
+                        className={`absolute top-2 right-2 w-1.5 h-1.5 ${item.particleColor} rounded-full`}
                         animate={{
                           y: [-6, 6, -6],
                           opacity: [0.4, 0.9, 0.4],
@@ -379,6 +397,7 @@ const About = () => {
             </div>
           </motion.div>
 
+          {/* Stats */}
           <motion.div variants={itemVariants}>
             <motion.div
               className="relative p-12 rounded-3xl backdrop-blur-lg bg-white/[0.008] border border-white/[0.025] overflow-hidden"
@@ -411,9 +430,9 @@ const About = () => {
                     >
                       {stat.number}
                     </motion.div>
-                    <span className="text-gray-400 text-sm uppercase tracking-widest font-light">
+                    <div className="text-gray-400 text-sm uppercase tracking-widest font-light">
                       {stat.label}
-                    </span>
+                    </div>
                   </motion.div>
                 ))}
               </div>
