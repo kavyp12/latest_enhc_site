@@ -1,7 +1,7 @@
 'use client';
 import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { MdOutlineArrowOutward } from "react-icons/md";
+import { MdOutlineArrowOutward } from 'react-icons/md';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,7 +9,7 @@ const Contact = () => {
     name: '',
     email: '',
     company: '',
-    message: ''
+    message: '',
   });
   const ref = useRef<HTMLDivElement>(null);
 
@@ -23,22 +23,25 @@ const Contact = () => {
       { threshold: 0.2 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current; // Store ref.current
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -48,7 +51,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative flex flex-col w-full py-20 bg-black text-white">
+    <section
+      id="contact"
+      className="relative flex flex-col w-full py-20 bg-black text-white"
+    >
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -57,7 +63,7 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
         >
           <h3 className="text-xl text-white pb-5">Get In Touch</h3>
-          
+
           <div className="grid lg:grid-cols-2 gap-16 mt-10">
             <div className="flex flex-col justify-center">
               <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
@@ -66,9 +72,10 @@ const Contact = () => {
                 <span className="text-orange-500">Together</span>
               </h2>
               <p className="text-lg text-gray-400 mb-12 leading-relaxed max-w-md">
-                Ready to transform your business with AI? Let&apos;s discuss your project.
+                Ready to transform your business with AI? Let&apos;s discuss your
+                project.
               </p>
-              
+
               <div className="space-y-4">
                 <div className="group cursor-pointer">
                   <p className="text-gray-500 text-sm mb-1">Email</p>
@@ -111,7 +118,7 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <input
                     type="text"
@@ -122,7 +129,7 @@ const Contact = () => {
                     className="w-full px-0 py-3 bg-transparent border-0 border-b border-gray-700 focus:border-orange-500 outline-none transition-colors duration-300 text-white placeholder-gray-500"
                   />
                 </div>
-                
+
                 <div>
                   <textarea
                     name="message"
@@ -134,7 +141,7 @@ const Contact = () => {
                     className="w-full px-0 py-3 bg-transparent border-0 border-b border-gray-700 focus:border-orange-500 outline-none transition-colors duration-300 text-white placeholder-gray-500 resize-none"
                   />
                 </div>
-                
+
                 <button
                   type="submit"
                   className="group/button flex items-center gap-3 mt-8 text-white hover:text-orange-500 transition-colors duration-300"

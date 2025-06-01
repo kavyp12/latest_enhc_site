@@ -39,57 +39,57 @@ const About = () => {
   };
 
   const stats = [
-    { number: "500+", label: "Projects Delivered" },
-    { number: "50+", label: "Happy Clients" },
-    { number: "24/7", label: "Support Available" },
-    { number: "99%", label: "Success Rate" }
+    { number: '500+', label: 'Projects Delivered' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '99%', label: 'Success Rate' },
   ];
 
   const expertiseItems = [
     {
-      title: "Custom LLMs",
-      desc: "Tailored language models for your specific needs",
+      title: 'Custom LLMs',
+      desc: 'Tailored language models for your specific needs',
       icon: FaBrain,
-      color: "orange",
-      iconColor: "text-orange-400",
-      titleHoverColor: "group-hover:text-orange-400",
-      gradientFrom: "from-orange-500/[0.025]",
-      particleColor: "bg-orange-500/70",
-      borderHoverColor: "hover:border-orange-500/30"
+      color: 'orange',
+      iconColor: 'text-orange-400',
+      titleHoverColor: 'group-hover:text-orange-400',
+      gradientFrom: 'from-orange-500/[0.025]',
+      particleColor: 'bg-orange-500/70',
+      borderHoverColor: 'hover:border-orange-500/30',
     },
     {
-      title: "AI Chatbots",
-      desc: "Intelligent conversational interfaces",
+      title: 'AI Chatbots',
+      desc: 'Intelligent conversational interfaces',
       icon: FaRobot,
-      color: "blue",
-      iconColor: "text-blue-400",
-      titleHoverColor: "group-hover:text-blue-400",
-      gradientFrom: "from-blue-500/[0.025]",
-      particleColor: "bg-blue-500/70",
-      borderHoverColor: "hover:border-blue-500/30"
+      color: 'blue',
+      iconColor: 'text-blue-400',
+      titleHoverColor: 'group-hover:text-blue-400',
+      gradientFrom: 'from-blue-500/[0.025]',
+      particleColor: 'bg-blue-500/70',
+      borderHoverColor: 'hover:border-blue-500/30',
     },
     {
-      title: "AI Integration",
-      desc: "Seamless AI implementations into existing systems",
+      title: 'AI Integration',
+      desc: 'Seamless AI implementations into existing systems',
       icon: FaCogs,
-      color: "purple",
-      iconColor: "text-purple-400",
-      titleHoverColor: "group-hover:text-purple-400",
-      gradientFrom: "from-purple-500/[0.025]",
-      particleColor: "bg-purple-500/70",
-      borderHoverColor: "hover:border-purple-500/30"
+      color: 'purple',
+      iconColor: 'text-purple-400',
+      titleHoverColor: 'group-hover:text-purple-400',
+      gradientFrom: 'from-purple-500/[0.025]',
+      particleColor: 'bg-purple-500/70',
+      borderHoverColor: 'hover:border-purple-500/30',
     },
     {
-      title: "ML Solutions",
-      desc: "Advanced machine learning algorithms",
+      title: 'ML Solutions',
+      desc: 'Advanced machine learning algorithms',
       icon: FaChartLine,
-      color: "green",
-      iconColor: "text-green-400",
-      titleHoverColor: "group-hover:text-green-400",
-      gradientFrom: "from-green-500/[0.025]",
-      particleColor: "bg-green-500/70",
-      borderHoverColor: "hover:border-green-500/30"
-    }
+      color: 'green',
+      iconColor: 'text-green-400',
+      titleHoverColor: 'group-hover:text-green-400',
+      gradientFrom: 'from-green-500/[0.025]',
+      particleColor: 'bg-green-500/70',
+      borderHoverColor: 'hover:border-green-500/30',
+    },
   ];
 
   const containerVariants = {
@@ -98,9 +98,9 @@ const About = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.15,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -111,9 +111,9 @@ const About = () => {
       rotateX: 0,
       transition: {
         duration: 0.7,
-        ease: [0.25, 0.46, 0.45, 0.94]
-      }
-    }
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    },
   };
 
   const floatingParticlesVariants = {
@@ -122,33 +122,45 @@ const About = () => {
       transition: {
         duration: 7,
         repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
+        ease: 'easeInOut',
+      },
+    },
   };
 
   const backgroundElementVariants = {
     animate: (i: number) => ({
-      x: [`${Math.random() * 15 - 7.5}px`, `${Math.random() * 20 - 10}px`, `${Math.random() * 15 - 7.5}px`],
-      y: [`${Math.random() * 15 - 7.5}px`, `${Math.random() * 20 - 10}px`, `${Math.random() * 15 - 7.5}px`],
+      x: [
+        `${Math.random() * 15 - 7.5}px`,
+        `${Math.random() * 20 - 10}px`,
+        `${Math.random() * 15 - 7.5}px`,
+      ],
+      y: [
+        `${Math.random() * 15 - 7.5}px`,
+        `${Math.random() * 20 - 10}px`,
+        `${Math.random() * 15 - 7.5}px`,
+      ],
       scale: [1, 1.03 + Math.random() * 0.03, 1],
       opacity: [
         parseFloat(i === 0 ? '0.03' : i === 1 ? '0.02' : '0.01'),
-        parseFloat(i === 0 ? '0.035' : i === 1 ? '0.025' : '0.015') + Math.random() * 0.01,
-        parseFloat(i === 0 ? '0.03' : i === 1 ? '0.02' : '0.01')
+        parseFloat(i === 0 ? '0.035' : i === 1 ? '0.025' : '0.015') +
+          Math.random() * 0.01,
+        parseFloat(i === 0 ? '0.03' : i === 1 ? '0.02' : '0.01'),
       ],
       transition: {
         duration: 20 + Math.random() * 10,
         repeat: Infinity,
-        ease: "easeInOut",
-        repeatType: "mirror" as const,
+        ease: 'easeInOut',
+        repeatType: 'mirror' as const,
         delay: i * 1.5,
-      }
-    })
+      },
+    }),
   };
 
   return (
-    <section id="about" className="relative flex flex-col w-full py-20 bg-black overflow-hidden">
+    <section
+      id="about"
+      className="relative flex flex-col w-full py-20 bg-black overflow-hidden"
+    >
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <motion.div
@@ -195,11 +207,13 @@ const About = () => {
           ref={ref}
           variants={containerVariants}
           initial="hidden"
-          animate={isVisible ? "visible" : "hidden"}
+          animate={isVisible ? 'visible' : 'hidden'}
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="mb-24">
-            <h3 className="text-xl text-white/60 pb-8 uppercase tracking-widest font-light">About Us</h3>
+            <h3 className="text-xl text-white/60 pb-8 uppercase tracking-widest font-light">
+              About Us
+            </h3>
             <div className="grid lg:grid-cols-2 gap-20 items-center">
               <div>
                 <motion.h2
@@ -212,7 +226,8 @@ const About = () => {
                   Future of AI
                 </motion.h2>
                 <p className="text-xl text-gray-400 leading-relaxed font-light">
-                  Transforming businesses through intelligent automation and cutting-edge AI solutions.
+                  Transforming businesses through intelligent automation and
+                  cutting-edge AI solutions.
                 </p>
               </div>
               <motion.div
@@ -224,33 +239,50 @@ const About = () => {
                 <div
                   className="relative p-10 rounded-3xl backdrop-blur-md bg-white/[0.01] border border-white/[0.03] shadow-2xl"
                   style={{
-                    transform: `perspective(1200px) rotateX(${mousePosition.y * 4}deg) rotateY(${mousePosition.x * 4}deg)`,
-                    transition: 'transform 0.2s ease-out'
+                    transform: `perspective(1200px) rotateX(${
+                      mousePosition.y * 4
+                    }deg) rotateY(${mousePosition.x * 4}deg)`,
+                    transition: 'transform 0.2s ease-out',
                   }}
                 >
                   <p className="text-xl md:text-2xl leading-relaxed text-gray-300 font-light">
-                    At enhancemodel.ai, we don't just build AI—we craft intelligent solutions that revolutionize how businesses operate, engage, and grow in the digital age.
+                    At enhancemodel.ai, we don&apos;t just build AI—we craft
+                    intelligent solutions that revolutionize how businesses
+                    operate, engage, and grow in the digital age.
                   </p>
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-orange-500/[0.03] via-transparent to-blue-500/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                   <motion.div
                     className="absolute -top-7 -right-7 w-14 h-14 bg-black/25 rounded-full backdrop-blur-lg border border-white/10 flex items-center justify-center shadow-xl"
                     style={{
-                      transform: `translateX(${mousePosition.x * -4}px) translateY(${mousePosition.y * -4}px)`,
+                      transform: `translateX(${mousePosition.x * -4}px) translateY(${
+                        mousePosition.y * -4
+                      }px)`,
                     }}
                     animate={{
                       rotateY: [0, 360],
-                      translateY: ["0%", "-15%", "0%"],
+                      translateY: ['0%', '-15%', '0%'],
                       scale: [1, 1.05, 1],
                     }}
                     transition={{
-                      rotateY: { duration: 10, repeat: Infinity, ease: "linear" },
-                      translateY: { duration: 3, repeat: Infinity, ease: "easeInOut", repeatType: "mirror" },
-                      scale: { duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatType: "mirror" },
+                      rotateY: { duration: 10, repeat: Infinity, ease: 'linear' },
+                      translateY: {
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: 'easeInOut',
+                        repeatType: 'mirror',
+                      },
+                      scale: {
+                        duration: 3.5,
+                        repeat: Infinity,
+                        ease: 'easeInOut',
+                        repeatType: 'mirror',
+                      },
                     }}
                     whileHover={{
                       scale: 1.25,
-                      boxShadow: "0 0 30px rgba(249, 115, 22, 0.6), 0 0 15px rgba(249, 115, 22, 0.4)",
+                      boxShadow:
+                        '0 0 30px rgba(249, 115, 22, 0.6), 0 0 15px rgba(249, 115, 22, 0.4)',
                     }}
                   >
                     <FaBrain
@@ -268,9 +300,24 @@ const About = () => {
           {/* Mission, Vision, Values */}
           <motion.div variants={itemVariants} className="grid lg:grid-cols-3 gap-8 mb-24">
             {[
-              { title: "Empowering Innovation", subtitle: "Our Mission", color: "orange", desc: "We specialize in developing custom Large Language Models, intelligent chatbots, and seamless AI integrations tailored to your unique business needs." },
-              { title: "Leading Tomorrow", subtitle: "Our Vision", color: "blue", desc: "To be the driving force behind AI transformation, helping businesses achieve unparalleled efficiency and customer engagement through innovation." },
-              { title: "Excellence First", subtitle: "Our Values", color: "purple", desc: "With passion for innovation and commitment to excellence, we deliver cutting-edge solutions that exceed expectations and drive real results." }
+              {
+                title: 'Empowering Innovation',
+                subtitle: 'Our Mission',
+                color: 'orange',
+                desc: 'We specialize in developing custom Large Language Models, intelligent chatbots, and seamless AI integrations tailored to your unique business needs.',
+              },
+              {
+                title: 'Leading Tomorrow',
+                subtitle: 'Our Vision',
+                color: 'blue',
+                desc: 'To be the driving force behind AI transformation, helping businesses achieve unparalleled efficiency and customer engagement through innovation.',
+              },
+              {
+                title: 'Excellence First',
+                subtitle: 'Our Values',
+                color: 'purple',
+                desc: 'With passion for innovation and commitment to excellence, we deliver cutting-edge solutions that exceed expectations and drive real results.',
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -282,17 +329,23 @@ const About = () => {
                   className="relative p-8 h-full rounded-3xl backdrop-blur-lg bg-white/[0.008] border border-white/[0.02] hover:border-white/[0.04] transition-all duration-700 overflow-hidden"
                   onMouseMove={handleMouseMove}
                   style={{
-                    transform: `perspective(1000px) rotateX(${mousePosition.y * 1.5}deg) rotateY(${mousePosition.x * 1.5}deg)`,
-                    transition: 'transform 0.2s ease-out, border-color 0.7s ease'
+                    transform: `perspective(1000px) rotateX(${
+                      mousePosition.y * 1.5
+                    }deg) rotateY(${mousePosition.x * 1.5}deg)`,
+                    transition: 'transform 0.2s ease-out, border-color 0.7s ease',
                   }}
                 >
                   <div className="relative z-10">
                     <div className="mb-6">
-                      <span className={`text-${item.color}-500 text-sm font-medium uppercase tracking-widest`}>
+                      <span
+                        className={`text-${item.color}-500 text-sm font-medium uppercase tracking-widest`}
+                      >
                         {item.subtitle}
                       </span>
                     </div>
-                    <h4 className={`text-2xl font-semibold mb-6 group-hover:text-${item.color}-400 transition-colors duration-500`}>
+                    <h4
+                      className={`text-2xl font-semibold mb-6 group-hover:text-${item.color}-400 transition-colors duration-500`}
+                    >
                       {item.title}
                     </h4>
                     <p className="text-gray-400 leading-relaxed font-light">
@@ -300,7 +353,9 @@ const About = () => {
                     </p>
                   </div>
 
-                  <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br from-${item.color}-500/[0.015] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
+                  <div
+                    className={`absolute inset-0 rounded-3xl bg-gradient-to-br from-${item.color}-500/[0.015] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700`}
+                  ></div>
 
                   <motion.div
                     className={`absolute top-4 right-4 w-2.5 h-2.5 bg-${item.color}-500/50 rounded-full`}
@@ -313,8 +368,8 @@ const About = () => {
                     transition={{
                       duration: 4 + Math.random() * 2,
                       repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: index * 0.4
+                      ease: 'easeInOut',
+                      delay: index * 0.4,
                     }}
                   />
                 </div>
@@ -322,17 +377,18 @@ const About = () => {
             ))}
           </motion.div>
 
-          {/* Expertise Areas - FIXED VERSION */}
+          {/* Expertise Areas */}
           <motion.div variants={itemVariants} className="mb-24">
             <div className="text-center mb-16">
               <motion.h4
                 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent"
-                whileHover={{ scale: 1.03, textShadow: "0 0 10px rgba(255,255,255,0.1)" }}
+                whileHover={{ scale: 1.03, textShadow: '0 0 10px rgba(255,255,255,0.1)' }}
               >
                 Our Expertise
               </motion.h4>
               <p className="text-gray-400 max-w-2xl mx-auto font-light text-lg">
-                Cutting-edge technologies and methodologies that power the future of artificial intelligence
+                Cutting-edge technologies and methodologies that power the future
+                of artificial intelligence
               </p>
             </div>
 
@@ -350,8 +406,11 @@ const About = () => {
                       className={`relative p-8 h-full rounded-3xl backdrop-blur-lg bg-white/[0.005] border border-white/[0.015] ${item.borderHoverColor} transition-all duration-700 overflow-hidden`}
                       onMouseMove={handleMouseMove}
                       style={{
-                        transform: `perspective(1000px) rotateX(${mousePosition.y * 2.5}deg)`,
-                        transition: 'transform 0.2s ease-out, border-color 0.7s ease'
+                        transform: `perspective(1000px) rotateX(${
+                          mousePosition.y * 2.5
+                        }deg)`,
+                        transition:
+                          'transform 0.2s ease-out, border-color 0.7s ease',
                       }}
                     >
                       <div className="relative z-10 text-center">
@@ -360,14 +419,24 @@ const About = () => {
                           whileHover={{
                             rotateY: 180,
                             scale: 1.12,
-                            boxShadow: `0 0 15px rgba(${item.color === 'orange' ? '249, 115, 22' : item.color === 'blue' ? '59, 130, 246' : item.color === 'purple' ? '168, 85, 247' : '34, 197, 94'}, 0.2)`
+                            boxShadow: `0 0 15px rgba(${
+                              item.color === 'orange'
+                                ? '249, 115, 22'
+                                : item.color === 'blue'
+                                ? '59, 130, 246'
+                                : item.color === 'purple'
+                                ? '168, 85, 247'
+                                : '34, 197, 94'
+                            }, 0.2)`,
                           }}
                           transition={{ duration: 0.5 }}
                         >
                           <IconComponent className={`w-10 h-10 ${item.iconColor}`} />
                         </motion.div>
 
-                        <h5 className={`font-semibold text-white mb-4 text-lg ${item.titleHoverColor} transition-colors duration-500`}>
+                        <h5
+                          className={`font-semibold text-white mb-4 text-lg ${item.titleHoverColor} transition-colors duration-500`}
+                        >
                           {item.title}
                         </h5>
                         <p className="text-sm text-gray-400 leading-relaxed font-light">
@@ -375,7 +444,9 @@ const About = () => {
                         </p>
                       </div>
 
-                      <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${item.gradientFrom} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
+                      <div
+                        className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${item.gradientFrom} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700`}
+                      ></div>
 
                       <motion.div
                         className={`absolute top-2 right-2 w-1.5 h-1.5 ${item.particleColor} rounded-full`}
@@ -386,8 +457,8 @@ const About = () => {
                         transition={{
                           duration: 3.5,
                           repeat: Infinity,
-                          ease: "easeInOut",
-                          delay: index * 0.25
+                          ease: 'easeInOut',
+                          delay: index * 0.25,
                         }}
                       />
                     </div>
@@ -401,7 +472,7 @@ const About = () => {
           <motion.div variants={itemVariants}>
             <motion.div
               className="relative p-12 rounded-3xl backdrop-blur-lg bg-white/[0.008] border border-white/[0.025] overflow-hidden"
-              whileHover={{ scale: 1.015, boxShadow: "0 0 20px rgba(255,255,255,0.03)" }}
+              whileHover={{ scale: 1.015, boxShadow: '0 0 20px rgba(255,255,255,0.03)' }}
               transition={{ duration: 0.3 }}
             >
               <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-12 text-center relative z-10">
@@ -418,14 +489,14 @@ const About = () => {
                         textShadow: [
                           '0 0 8px rgba(249, 115, 22, 0.4)',
                           '0 0 16px rgba(249, 115, 22, 0.6)',
-                          '0 0 8px rgba(249, 115, 22, 0.4)'
-                        ]
+                          '0 0 8px rgba(249, 115, 22, 0.4)',
+                        ],
                       }}
                       transition={{
                         duration: 2.5,
                         repeat: Infinity,
-                        ease: "easeInOut",
-                        delay: index * 0.3
+                        ease: 'easeInOut',
+                        delay: index * 0.3,
                       }}
                     >
                       {stat.number}
@@ -442,14 +513,14 @@ const About = () => {
               <motion.div
                 className="absolute inset-0 rounded-3xl opacity-30"
                 animate={{
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                  backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                   background: [
                     'linear-gradient(45deg, rgba(249, 115, 22, 0.005) 0%, transparent 30%, rgba(59, 130, 246, 0.005) 70%, transparent 100%)',
                     'linear-gradient(45deg, transparent 0%, rgba(249, 115, 22, 0.005) 30%, transparent 70%, rgba(59, 130, 246, 0.005) 100%)',
                     'linear-gradient(45deg, rgba(249, 115, 22, 0.005) 0%, transparent 30%, rgba(59, 130, 246, 0.005) 70%, transparent 100%)',
-                  ]
+                  ],
                 }}
-                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
               />
             </motion.div>
           </motion.div>
