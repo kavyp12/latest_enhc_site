@@ -1,18 +1,23 @@
 {
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next",
-      "config": {
-        "buildCommand": "npm run build",
-        "env": {
-          "NEXT_IGNORE_ESLINT": "1"
-        }
-      }
-    }
-  ],
+  "version": 2,
   "framework": "nextjs",
   "installCommand": "npm install",
   "buildCommand": "next build --no-lint",
-  "outputDirectory": ".next"
+  "outputDirectory": ".next",
+  "env": {
+    "NEXT_IGNORE_ESLINT": "1"
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }
