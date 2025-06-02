@@ -1,7 +1,9 @@
+// D:\agency-website\src\components\contactus.tsx
 'use client';
 import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { MdOutlineArrowOutward } from 'react-icons/md';
+import axios from 'axios';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,6 +13,7 @@ const Contact = () => {
     company: '',
     message: '',
   });
+  const [status, setStatus] = useState<string | null>(null);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,7 +26,7 @@ const Contact = () => {
       { threshold: 0.2 }
     );
 
-    const currentRef = ref.current; // Store ref.current
+    const currentRef = ref.current;
     if (currentRef) {
       observer.observe(currentRef);
     }
@@ -45,9 +48,22 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    try {
+      const now = new Date();
+      const submission = {
+        ...formData,
+        status: 'new', // Default status for new submissions
+        date: now.toISOString().slice(0, 10), // YYYY-MM-DD
+        time: now.toTimeString().slice(0, 5), // HH:MM
+      };
+      const response = await axios.post('/api/contact', submission);
+      setStatus('Message sent successfully!');
+      setFormData({ name: '', email: '', company: '', message: '' }); // Reset form
+    } catch (error) {
+      setStatus('Failed to send message. Please try again.');
+    }
   };
 
   return (
@@ -67,12 +83,12 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-16 mt-10">
             <div className="flex flex-col justify-center">
               <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Let&apos;s Build
+                Let's Build
                 <br />
                 <span className="text-orange-500">Together</span>
               </h2>
               <p className="text-lg text-gray-400 mb-12 leading-relaxed max-w-md">
-                Ready to transform your business with AI? Let&apos;s discuss your
+                Ready to transform your business with AI? Let's discuss your
                 project.
               </p>
 
@@ -141,6 +157,18 @@ const Contact = () => {
                     className="w-full px-0 py-3 bg-transparent border-0 border-b border-gray-700 focus:border-orange-500 outline-none transition-colors duration-300 text-white placeholder-gray-500 resize-none"
                   />
                 </div>
+
+                {status && (
+                  <p
+                    className={`text-sm ${
+                      status.includes('successfully')
+                        ? 'text-green-500'
+                        : 'text-red-500'
+                    }`}
+                  >
+                    {status}
+                  </p>
+                )}
 
                 <button
                   type="submit"
