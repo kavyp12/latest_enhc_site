@@ -83,12 +83,12 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-16 mt-10">
             <div className="flex flex-col justify-center">
               <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Let's Build
+                Let&apos;s Build
                 <br />
                 <span className="text-orange-500">Together</span>
               </h2>
               <p className="text-lg text-gray-400 mb-12 leading-relaxed max-w-md">
-                Ready to transform your business with AI? Let's discuss your
+                Ready to transform your business with AI? Let&apos;s discuss your
                 project.
               </p>
 
