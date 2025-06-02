@@ -14,6 +14,7 @@
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.8.9",
     "@studio-freight/lenis": "^1.0.42",
+    "@supabase/supabase-js": "^2.49.8",
     "@tabler/icons-react": "^3.9.0",
     "@tsparticles/engine": "^3.5.0",
     "@tsparticles/react": "^3.0.0",

@@ -1,19 +1,23 @@
 // D:\agency-website\src\app\api\submissions\route.ts
 import { NextResponse } from 'next/server';
-import fs from 'fs/promises';
-import path from 'path';
+import { supabaseAdmin } from '@/lib/supabase';
 
 export async function GET() {
   try {
-    const filePath = path.join(process.cwd(), 'data', 'submissions.json');
-    let submissions = [];
-    try {
-      const fileContent = await fs.readFile(filePath, 'utf-8');
-      submissions = JSON.parse(fileContent);
-    } catch (error) {
-      submissions = [];
+    const { data, error } = await supabaseAdmin
+      .from('ContactSubmission')
+      .select('*')
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      console.error('Supabase error:', error);
+      return NextResponse.json(
+        { error: 'Failed to fetch submissions' },
+        { status: 500 }
+      );
     }
-    return NextResponse.json(submissions, { status: 200 });
+
+    return NextResponse.json(data, { status: 200 });
   } catch (error) {
     console.error('Error fetching submissions:', error);
     return NextResponse.json(

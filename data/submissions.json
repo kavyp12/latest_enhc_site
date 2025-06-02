@@ -18,5 +18,15 @@
     "status": "replied",
     "date": "2025-06-02",
     "time": "12:15"
+  },
+  {
+    "id": 3,
+    "name": "kavy patel",
+    "email": "kavypatelee255@gmail.com",
+    "company": "enhc",
+    "message": "scef",
+    "status": "new",
+    "date": "2025-06-02",
+    "time": "14:04"
   }
 ]

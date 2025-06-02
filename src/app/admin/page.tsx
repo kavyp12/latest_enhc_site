@@ -51,7 +51,9 @@ const AdminPage = () => {
     );
   }
 
-  return <AdminPanel />;
+  return <AdminPanel onLogout={function (): void {
+    throw new Error('Function not implemented.');
+  } } />;
 };
 
 export default AdminPage;
