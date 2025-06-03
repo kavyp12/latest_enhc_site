@@ -1,4 +1,3 @@
-
 export const gridItems = [
     {
         id: 1,
@@ -66,7 +65,29 @@ export const gridItems = [
         img: "/grid.svg",
         spareImg: "/b4.svg",
     },
-    
+    // NEW AI SERVICES ADDED BELOW
+    {
+        id: 8,
+        title: "AI Chatbots & Automation",
+        description: "Transform your customer service with intelligent AI chatbots that provide 24/7 support, increase operational efficiency, and boost your company's profitability.",
+        className: "lg:col-span-3 md:col-span-6 md:row-span-3 h-[50vh] lg:min-h-[50vh]",
+        imgClassName: "",
+        titleClassName: "justify-start",
+        descriptionClassName: "md:max-w-lg",
+        img: "",
+        spareImg: "/grid.svg",
+    },
+    {
+        id: 9,
+        title: "Custom LLM Models",
+        description: "Develop tailored Large Language Models that understand your business context, deliver precise industry-specific solutions, and significantly improve operational efficiency.",
+        className: "lg:col-span-2 md:col-span-3 md:row-span-3 h-[50vh]",
+        imgClassName: "",
+        titleClassName: "justify-center",
+        descriptionClassName: "max-w-sm",
+        img: "",
+        spareImg: "",
+    },
     {
         id: 7,
         title: "Let's start a project together?",
@@ -108,7 +129,7 @@ export const workItems = [
         id: 3,
         title: "Project 3",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare luctus arcu, nec ultricies libero consequat nec. Suspendisse id ipsum nibh. Vestibulum.",
-        className: "lg:col-span-5 md:col-span-5 md:row-span-1",
+        lassName: "lg:col-span-5 md:col-span-5 md:row-span-1",
         imgClassName: "",
         titleClassName: "justify-center md:max-w-full max-w-60 text-center",
         img: "/works/works03.jpg",
