@@ -1,4 +1,3 @@
-import { MdOutlineArrowOutward } from "react-icons/md";
 import { workItems } from "../data/index";
 import Image from "next/image";
 
@@ -25,11 +24,6 @@ export default function Works() {
                                 </div>
                             </div>
                         </div>
-                        <button
-                            type="button"
-                            className="flex items-end gap-4 group/button">
-                            <span className="text-xl ">Project Details</span> <MdOutlineArrowOutward className="text-3xl group-hover/button:rotate-45 group-hover/button:translate-x-5 duration-500"/>
-                        </button>
                     </div>
                     <div className="flex flex-col">
                         <div className="w-[100vw] md:w-[80vh] h-[50vh] overflow-hidden rounded-3xl relative bg-black">
@@ -39,7 +33,7 @@ export default function Works() {
                                 fill
                                 className="object-cover group-hover:scale-105 duration-300"
                                 loading="lazy"
-                                quality={75} // Optional: Adjust the quality for better performance
+                                quality={75}
                             />
                         </div>
                     </div>

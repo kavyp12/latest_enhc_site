@@ -103,8 +103,8 @@ export const gridItems = [
 export const workItems = [
     {
         id: 1,
-        title: "Project 1",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare luctus arcu, nec ultricies libero consequat nec. Suspendisse id ipsum nibh. Vestibulum.",
+        title: "AudioGear Shop",
+        description: "A sleek e-commerce platform designed for audiophiles, offering premium headphones and audio equipment with an intuitive shopping experience.",
         className: "lg:col-span-5 md:col-span-5 md:row-span-1",
         imgClassName: "",
         titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -115,8 +115,8 @@ export const workItems = [
     },
     {
         id: 2,
-        title: "Project 2",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare luctus arcu, nec ultricies libero consequat nec. Suspendisse id ipsum nibh. Vestibulum.",
+        title: "Sunset Music Fest 2024",
+        description: "An event ticketing website for the Sunset Music Festival 2024, held in Kuching, Sarawak, providing seamless ticket purchasing and event details for music enthusiasts.",
         className: "lg:col-span-5 md:col-span-5 md:row-span-1",
         imgClassName: "",
         titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -127,9 +127,9 @@ export const workItems = [
     },
     {
         id: 3,
-        title: "Project 3",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare luctus arcu, nec ultricies libero consequat nec. Suspendisse id ipsum nibh. Vestibulum.",
-        lassName: "lg:col-span-5 md:col-span-5 md:row-span-1",
+        title: "Luxury Estates",
+        description: "An informative property website showcasing luxury homes, complete with enquiry forms to connect buyers with their dream estates.",
+        className: "lg:col-span-5 md:col-span-5 md:row-span-1",
         imgClassName: "",
         titleClassName: "justify-center md:max-w-full max-w-60 text-center",
         img: "/works/works03.jpg",
@@ -137,4 +137,4 @@ export const workItems = [
         tag: "Informative, Enquiry",
         link: "",
     },
-]
+];
