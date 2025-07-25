@@ -72,7 +72,7 @@ export default function Works() {
             </div>
 
             {/* Header Section */}
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container mx-auto px-6 relative z-10" style={{ maxWidth: '1500px' }}>
                 <div className="text-center mb-20">
                     <div className="inline-block">
                         <h2 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent mb-6 relative">
