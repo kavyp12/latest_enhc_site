@@ -255,22 +255,25 @@ export const BentoGridItem = ({
   id,
   title,
   description,
-  descriptionClassName,
   img,
   imgClassName,
   titleClassName,
+  descriptionClassName,
   spareImg,
+  children,
 }: {
   className?: string;
   id: number;
-  title?: string | React.ReactNode;
-  description?: string | React.ReactNode;
+  title?: React.ReactNode;
+  description?: React.ReactNode;
   img?: string;
   imgClassName?: string;
   titleClassName?: string;
   descriptionClassName?: string;
   spareImg?: string;
+  children?: React.ReactNode;
 }) => {
+  
   const leftLists = ['ReactJS', 'Express', 'Typescript'];
   const rightLists = ['VueJS', 'NuxtJS', 'GraphQL'];
 

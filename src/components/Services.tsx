@@ -23,15 +23,20 @@ const Services = () => {
               key={i}
               title={item.title}
               description={item.description}
-              // remove icon prop
-              // remove original classname condition
               className={item.className}
               img={item.img}
               imgClassName={item.imgClassName}
               titleClassName={item.titleClassName}
               descriptionClassName={item.descriptionClassName}
               spareImg={item.spareImg}
-            />
+            >
+              {/* Add button for the CTA item */}
+              {item.id === 7 && (
+                <button className="bg-white rounded-full text-black px-6 py-3 mt-5 font-semibold text-sm">
+                    Let's Talk
+                </button>
+              )}
+            </BentoGridItem>
           ))}
         </BentoGrid>
       </>
