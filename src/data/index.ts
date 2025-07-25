@@ -101,10 +101,12 @@ export const gridItems = [
 ];
 
 export const workItems = [
-     {
+    {
         id: 1,
         title: "Vedcool",
-        description: "A comprehensive school management system designed for educational institutions, offering AI-enhanced tools and personalized learning features with an intuitive interface.",
+        subtitle: "Next-Gen Education Platform",
+        description: "A comprehensive school management system designed for educational institutions, offering AI-enhanced tools and personalized learning features with an intuitive interface that revolutionizes how students and educators interact.",
+        longDescription: "Built with cutting-edge AI technology, this platform transforms traditional educational workflows into intelligent, adaptive experiences. Features include smart scheduling, automated grading, personalized learning paths, and real-time analytics dashboard.",
         className: "lg:col-span-2 md:col-span-3 md:row-span-3 h-[50vh]",
         imgClassName: "w-full h-2/3 object-cover rounded-lg",
         titleClassName: "justify-start mt-4",
@@ -113,11 +115,20 @@ export const workItems = [
         category: "Education Technology",
         tag: "AI consulting, AI features development & integration",
         link: "",
+        technologies: ["React", "Node.js", "AI/ML", "MongoDB", "Socket.io"],
+        duration: "8 months",
+        team: "6 developers",
+        impact: "40% increase in student engagement",
+        color: "from-blue-500 to-purple-600",
+        accentColor: "bg-blue-500",
+        year: "2024"
     },
     {
         id: 2,
         title: "Sunset Music Fest 2024",
+        subtitle: "Premium Event Experience",
         description: "An event ticketing website for the Sunset Music Festival 2024, held in Kuching, Sarawak, providing seamless ticket purchasing and event details for music enthusiasts.",
+        longDescription: "A high-performance ticketing platform that handled over 50,000 concurrent users during peak sales. Features real-time seat selection, mobile-first design, and integrated payment processing with fraud detection.",
         className: "lg:col-span-3 md:col-span-3 md:row-span-2 h-[35vh]",
         imgClassName: "w-full h-1/2 object-cover rounded-lg",
         titleClassName: "justify-start mt-3",
@@ -126,11 +137,20 @@ export const workItems = [
         category: "Event",
         tag: "Ticketing",
         link: "",
+        technologies: ["Next.js", "Stripe", "Redis", "PostgreSQL", "WebSocket"],
+        duration: "4 months",
+        team: "4 developers",
+        impact: "99.9% uptime during sales",
+        color: "from-orange-500 to-red-600",
+        accentColor: "bg-orange-500",
+        year: "2024"
     },
     {
         id: 3,
         title: "Luxury Estates",
+        subtitle: "Premium Property Showcase",
         description: "An informative property website showcasing luxury homes, complete with enquiry forms to connect buyers with their dream estates.",
+        longDescription: "A sophisticated property platform featuring 3D virtual tours, advanced filtering systems, and AI-powered property recommendations. Integrated with CRM systems for seamless lead management and follow-up automation.",
         className: "lg:col-span-2 md:col-span-6 md:row-span-2 h-[35vh]",
         imgClassName: "w-full h-1/2 object-cover rounded-lg",
         titleClassName: "justify-start mt-3",
@@ -139,5 +159,12 @@ export const workItems = [
         category: "Property",
         tag: "Informative, Enquiry",
         link: "",
+        technologies: ["Vue.js", "Three.js", "Laravel", "MySQL", "AWS"],
+        duration: "6 months",
+        team: "5 developers",
+        impact: "300% increase in inquiries",
+        color: "from-green-500 to-teal-600",
+        accentColor: "bg-green-500",
+        year: "2023"
     },
 ];
