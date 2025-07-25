@@ -7,8 +7,11 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Website Agency",
+  title: "enhc",
   description: "We build your ideas",
+  icons: {
+    icon: "/enhc_logo.png", // Changed to .png
+  },
 };
 
 export default function RootLayout({
