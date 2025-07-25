@@ -55,7 +55,7 @@ export default function Works() {
     const scrollToContact = () => {
         const contactSection = document.getElementById('contact');
         if (contactSection) {
-            contactSection.scrollIntoView({ 
+            contactSection.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
@@ -92,8 +92,8 @@ export default function Works() {
                             key={item.id}
                             data-id={item.id}
                             className={`relative group transition-all duration-1000 ${
-                                isVisible[item.id] 
-                                    ? 'opacity-100 translate-y-0' 
+                                isVisible[item.id]
+                                    ? 'opacity-100 translate-y-0'
                                     : 'opacity-0 translate-y-20'
                             }`}
                             style={{ transitionDelay: `${index * 200}ms` }}
@@ -140,10 +140,10 @@ export default function Works() {
                                             className="text-purple-400 hover:text-purple-300 font-medium transition-colors inline-flex items-center gap-2"
                                         >
                                             {activeProject === item.id ? 'Show Less' : 'Read More'}
-                                            <svg 
+                                            <svg
                                                 className={`w-4 h-4 transition-transform ${activeProject === item.id ? 'rotate-180' : ''}`}
-                                                fill="none" 
-                                                viewBox="0 0 24 24" 
+                                                fill="none"
+                                                viewBox="0 0 24 24"
                                                 stroke="currentColor"
                                             >
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -190,8 +190,8 @@ export default function Works() {
                                                     className={`
                                                         px-4 py-2 rounded-full border border-gray-700 text-sm font-medium
                                                         transition-all duration-300 cursor-pointer
-                                                        ${hoveredTech === tech 
-                                                            ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white border-transparent transform scale-110 shadow-lg shadow-purple-500/25' 
+                                                        ${hoveredTech === tech
+                                                            ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white border-transparent transform scale-110 shadow-lg shadow-purple-500/25'
                                                             : 'text-gray-300 hover:border-purple-500 hover:text-purple-300'
                                                         }
                                                     `}
@@ -211,12 +211,12 @@ export default function Works() {
                                     <div className="relative">
                                         {/* Decorative Elements */}
                                         <div className={`
-                                            absolute -inset-4 bg-gradient-to-r ${item.color} rounded-3xl blur-xl opacity-20 
+                                            absolute -inset-4 bg-gradient-to-r ${item.color} rounded-3xl blur-xl opacity-20
                                             group-hover/image:opacity-40 transition-opacity duration-500
                                         `}></div>
                                         <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-2xl opacity-60 group-hover/image:opacity-100 transition-opacity duration-500"></div>
                                         <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full blur-2xl opacity-60 group-hover/image:opacity-100 transition-opacity duration-500"></div>
-                                        
+
                                         {/* Main Image Container */}
                                         <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-gray-800 shadow-2xl">
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
@@ -228,7 +228,7 @@ export default function Works() {
                                                 loading="lazy"
                                                 quality={90}
                                             />
-                                            
+
                                             {/* Overlay Elements */}
                                             <div className="absolute bottom-6 left-6 right-6 z-20 opacity-0 group-hover/image:opacity-100 transition-opacity duration-500">
                                                 <div className="flex items-center justify-between">
@@ -245,7 +245,7 @@ export default function Works() {
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         {/* Floating Card */}
                                         <div className={`
                                             absolute -bottom-8 -right-8 p-4 rounded-2xl backdrop-blur-sm border border-white/10
@@ -285,13 +285,13 @@ export default function Works() {
                             Ready to Start Your Project?
                         </h3>
                         <p className="text-gray-300 text-lg mb-8 max-w-2xl">
-                            Let's collaborate and bring your vision to life with cutting-edge technology and innovative design.
+                            Let&apos;s collaborate and bring your vision to life with cutting-edge technology and innovative design.
                         </p>
-                        <button 
+                        <button
                             onClick={scrollToContact}
                             className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25"
                         >
-                            Let's Work Together
+                            Let&apos;s Work Together
                         </button>
                     </div>
                 </div>
