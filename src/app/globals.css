@@ -91,6 +91,7 @@ html.lenis, html.lenis body {
   transform: translateX(-50%);
 }
 
+
 .soda {
   --left: 0px;
   background: var(--url) var(--left), url(/sodaimage/mockup.png) 0 0;
