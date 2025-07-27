@@ -3,6 +3,7 @@ import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Services from '@/components/Services';
 import LenisScroll from '@/components/ui/LenisScroll';
+import Testimonials from "@/components/Testimonials"; // <-- Import it
 import Works from "@/components/Works";
 import ContactForm from "@/components/contactus";
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <About />
       <Services />
       <Works />
+      <Testimonials /> 
       <ContactForm />
     </main>
   );
