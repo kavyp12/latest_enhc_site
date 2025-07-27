@@ -268,27 +268,26 @@ export default function Works() {
                                         <div className="h-px w-20 bg-gradient-to-l from-transparent to-purple-500"></div>
                                     </div>
                                 </div>
-                            )}
+            
+            )}
                         </div>
                     ))}
                 </div>
 
-                {/* Bottom CTA */}
-                <div className="text-center mt-32">
-                    <div className="inline-block p-8 rounded-3xl bg-gradient-to-r from-purple-500/10 to-orange-500/10 border border-purple-500/20 backdrop-blur-sm">
-                        <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                            Ready to Start Your Project?
-                        </h3>
-                        <p className="text-gray-300 text-lg mb-8 max-w-2xl">
-                            Let&apos;s collaborate and bring your vision to life with cutting-edge technology and innovative design.
-                        </p>
-                        <button
-                            onClick={scrollToContact}
-                            className="px-8 py-4 bg-gradient-to-r from-purple-500 to-orange-500 text-white font-semibold rounded-full hover:from-purple-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25"
-                        >
-                            Let&apos;s Work Together
-                        </button>
-                    </div>
+                {/* Bottom CTA - Matching Services exact styling */}
+                <div className="mt-32 w-full text-center">
+                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-8">
+                        Ready to Start Your Project?
+                    </h3>
+                    <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+                        Let&apos;s collaborate and bring your vision to life with cutting-edge technology and innovative design.
+                    </p>
+                    <button
+                        onClick={scrollToContact}
+                        className="bg-white rounded-full text-black px-6 py-3 font-semibold text-sm"
+                    >
+                        Let&apos;s Work Together
+                    </button>
                 </div>
             </div>
         </section>
