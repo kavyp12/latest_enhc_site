@@ -115,13 +115,10 @@ const Testimonials = () => {
           variants={containerVariants}
         >
           {/* Section Header */}
-          <div className="text-center mb-20">
-            <h3 className="text-xl text-white/60 pb-4 uppercase tracking-widest font-light">
+          <div className="text-left mb-20">
+            <h3 className="text-2xl text-white z-50 container pb-5">
               Client Feedback
             </h3>
-            <h2 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-gray-300 to-orange-400 bg-clip-text text-transparent">
-              Trusted by the Best
-            </h2>
           </div>
 
           {/* Testimonials Grid */}
